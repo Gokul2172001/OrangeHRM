@@ -19,7 +19,7 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\EDUCATION\\ECLIPSE\\freeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\Dell\\eclipse-workspace\\OrangeHRMTest\\src\\main\\java\\com\\hrn\\qa\\config\\config.properties");
 			prop.load(ip);
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
@@ -38,7 +38,7 @@ public class TestBase {
 			ChromeOptions ops = new ChromeOptions();
 			ops.addArguments("--remote-allow-origins=*");
 			System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\ELCOT\\Documents\\chromedriver_win32\\chromedriver.exe");
+				"C:\\Users\\Dell\\Documents\\chromedriver-win64\\chromedriver.exe");
 			driver = new ChromeDriver(ops);
 		}else if(browserName.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver","C:\\Users\\Documents\\chromedriver_win64\\chromedriver.exe");
