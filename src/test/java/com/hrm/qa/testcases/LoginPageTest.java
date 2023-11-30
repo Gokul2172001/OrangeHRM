@@ -29,10 +29,12 @@ public class LoginPageTest extends TestBase{
 		String flag = loginPage.validatePageTitle();
 		Assert.assertEquals(flag, "OrangeHRM");
 	}
+	
 	@Test(priority=2)
 	public void logoCheck() {
 		Assert.assertTrue(loginPage.checkLogo());
 	}
+	
 	@Test(priority=3)
 	public void loginCheck() {
 		dashboardPage = loginPage.checkLogin(prop.getProperty("username"), prop.getProperty("password"));
