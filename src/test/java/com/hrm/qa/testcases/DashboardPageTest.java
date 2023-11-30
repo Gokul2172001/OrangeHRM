@@ -25,11 +25,13 @@ public class DashboardPageTest extends TestBase {
 		dashboardPage = new DashboardPage();
 		loginPage.checkLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
+	
 	@Test(priority=1)
 	public void checkTimeAtWork() {
 		boolean flag = dashboardPage.TimeAtWorkCheck();
 		Assert.assertTrue(flag, "Time at work isn't showing");
 	}
+	
 	@Test(priority=2)
 	public void navigateLeaveRequestToApprove() {
 		String check = dashboardPage.MyActionsMenuClick("Leave Request to Approve");
