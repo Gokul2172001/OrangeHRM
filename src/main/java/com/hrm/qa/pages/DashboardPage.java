@@ -22,15 +22,12 @@ public class DashboardPage extends TestBase {
 
 	@FindBy(css = "div.orangehrm-todo-list>div:nth-child(4)")
 	WebElement CandidateToInterview;
-
 	public DashboardPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
 	public boolean TimeAtWorkCheck() {
 		return timeAtWorkGrid.isDisplayed();
 	}
-
 	public String MyActionsMenuClick(String action) {
 		if (action == "Leave Request to Approve") {
 			LeaveRequestToApprove.click();
@@ -47,5 +44,4 @@ public class DashboardPage extends TestBase {
 		} else
 			return "error";
 	}
-
 }
