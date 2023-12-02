@@ -23,21 +23,17 @@ public class LoginPage extends TestBase{
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
 	public String validatePageTitle() {
 		return driver.getTitle();
 	}
-	
 	public boolean checkLogo() {
 		boolean flag = logo.isDisplayed();
 		return flag;
 	}
-	
 	public DashboardPage checkLogin(String user, String pwd) {
 		Username.sendKeys(user);
 		Password.sendKeys(pwd);
 		lgnbtn.click();
 		return new DashboardPage();
 	}
-
 }
