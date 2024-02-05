@@ -5,7 +5,8 @@
     <classes>
       <class name="com.hrm.qa.testcases.DashboardPageTest">
         <methods>
-          <include name="checkTimeAtWork"/>
+          <include name="navigateLeaveRequestToApprove"/>
+          <include name="teardown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.hrm.qa.testcases.DashboardPageTest -->
