@@ -38,7 +38,19 @@ public class DashboardPageTest extends TestBase {
 		Assert.assertEquals(check, "https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList");
 	}
 	
-	@AfterMethod
+	@Test(priority=3)
+	public void checkMenuList() {
+		Assert.assertEquals(dashboardPage.CheckMenuList("Admin"),"Admin");
+		Assert.assertEquals(dashboardPage.CheckMenuList("PIM"),"PIM");
+		Assert.assertEquals(dashboardPage.CheckMenuList("Leave"),"Leave");
+		Assert.assertEquals(dashboardPage.CheckMenuList("Time"),"Time");
+		Assert.assertEquals(dashboardPage.CheckMenuList("Recruitment"),"Recruitment");
+		Assert.assertEquals(dashboardPage.CheckMenuList("My Info"),"My Info");
+		Assert.assertEquals(dashboardPage.CheckMenuList("Performance"),"Performance");
+		Assert.assertEquals(dashboardPage.CheckMenuList("Dashboard"),"Dashboard");
+		Assert.assertEquals(dashboardPage.CheckMenuList("Directory"),"Directory");
+	}
+ 	@AfterMethod
 	public void teardown() {
 		driver.close();
 	}

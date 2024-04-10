@@ -5,9 +5,9 @@
     <classes>
       <class name="com.hrm.qa.testcases.DashboardPageTest">
         <methods>
-          <include name="navigateLeaveRequestToApprove"/>
           <include name="teardown"/>
           <include name="setUp"/>
+          <include name="checkMenuList"/>
         </methods>
       </class> <!-- com.hrm.qa.testcases.DashboardPageTest -->
     </classes>
