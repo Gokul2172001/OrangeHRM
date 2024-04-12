@@ -50,6 +50,12 @@ public class DashboardPageTest extends TestBase {
 		Assert.assertEquals(dashboardPage.CheckMenuList("Dashboard"),"Dashboard");
 		Assert.assertEquals(dashboardPage.CheckMenuList("Directory"),"Directory");
 	}
+	
+	//Verify user can able to add Record and view the record
+	@Test(priority=4)
+	public void addRecord() {
+		
+	}
  	@AfterMethod
 	public void teardown() {
 		driver.close();
