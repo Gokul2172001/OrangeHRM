@@ -55,6 +55,9 @@ public class DashboardPage extends TestBase {
 
 	@FindBy(css = "ul.oxd-main-menu>li:nth-child(11)")
 	WebElement Menu11;
+	
+	@FindBy(css="div.orangehrm-header-container>button[type='button']")
+	WebElement AddRecordAdmin;
 
 	public DashboardPage() {
 		PageFactory.initElements(driver, this);
@@ -130,7 +133,7 @@ public class DashboardPage extends TestBase {
 		return "Null";
 	}
 
-	public String ClickMenuList(String menu) {
+	public void ClickMenuList(String menu) {
 		if (menu == "Admin") 
 			Menu1.click();
 		if (menu == "PIM") 
@@ -149,6 +152,11 @@ public class DashboardPage extends TestBase {
 			Menu8.click();
 		if (menu == "Directory") 
 			Menu9.click();
-		return "Null";
+	}
+
+	public void AddRecordAdmin() {
+		AddRecordAdmin.click();
+		
+		
 	}
 }
