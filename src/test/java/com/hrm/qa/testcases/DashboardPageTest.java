@@ -54,8 +54,8 @@ public class DashboardPageTest extends TestBase {
 	//Verify user can able to add Record and view the record
 	@Test(priority=4)
 	public void addRecordAdmin() {
-//		String menu = "Admin"
 		dashboardPage.ClickMenuList("Admin");
+		dashboardPage.AddRecordAdmin()
 	}
  	@AfterMethod
 	public void teardown() {
