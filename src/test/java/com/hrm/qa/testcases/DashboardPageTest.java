@@ -55,7 +55,7 @@ public class DashboardPageTest extends TestBase {
 	@Test(priority=4)
 	public void addRecordAdmin() {
 		dashboardPage.ClickMenuList("Admin");
-		dashboardPage.AddRecordAdmin()
+		dashboardPage.AddRecordAdmin();
 	}
  	@AfterMethod
 	public void teardown() {
