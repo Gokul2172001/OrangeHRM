@@ -158,5 +158,6 @@ public class DashboardPage extends TestBase {
 		AddRecordAdmin.click();
 		
 		
+		
 	}
 }
