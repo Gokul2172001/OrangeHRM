@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hrm.qa.testcases.DashboardPageTest">
+      <class name="com.hrm.qa.testcases.LoginPageTest">
         <methods>
-          <include name="navigateLeaveRequestToApprove"/>
-          <include name="teardown"/>
+          <include name="logoCheck"/>
+          <include name="loginCheck"/>
           <include name="setUp"/>
+          <include name="loginTitleCheck"/>
+          <include name="end"/>
         </methods>
-      </class> <!-- com.hrm.qa.testcases.DashboardPageTest -->
+      </class> <!-- com.hrm.qa.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
