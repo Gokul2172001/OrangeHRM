@@ -40,6 +40,11 @@ public class LoginPageTest extends TestBase {
 		dashboardPage = loginPage.checkLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
+	@Test(priority = 4)
+	public void loginCheckNegative() {
+		dashboardPage = loginPage.checkLogin("userName", "Password");
+	}
+
 	@AfterMethod
 	public void end() throws InterruptedException {
 		Thread.sleep(3000);
