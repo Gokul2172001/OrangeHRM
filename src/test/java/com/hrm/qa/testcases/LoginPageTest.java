@@ -45,6 +45,18 @@ public class LoginPageTest extends TestBase {
 		dashboardPage = loginPage.checkLogin("userName", "Password");
 	}
 
+	@Test(priority = 5)
+	public void InvlidLoginCheck() {
+		String flag = loginPage.validatePageTitle();
+		Assert.assertNotEquals(flag, "OrangeHRM");
+	}
+
+	@Test(priority = 6)
+	public void InvlalidPasswordCheck() {
+		DashboardPage InvalidPasswordError = loginPage.checkLogin("UserName", "InvalidPassword");
+		Assert.assertEquals("", InvalidPasswordError);
+	}
+
 	@AfterMethod
 	public void end() throws InterruptedException {
 		Thread.sleep(3000);
