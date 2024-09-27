@@ -24,22 +24,26 @@ public class LoginPageTest extends TestBase {
 		loginPage = new LoginPage();
 	}
 
+	// TC-07:- Verify the title of the page is expected or not
 	@Test(priority = 1)
 	public void loginTitleCheck() {
 		String flag = loginPage.validatePageTitle();
 		Assert.assertEquals(flag, "OrangeHRM");
 	}
 
+	// TC-08:- Verify the page has a company logo at the beginning
 	@Test(priority = 2)
 	public void logoCheck() {
 		Assert.assertTrue(loginPage.checkLogo());
 	}
 
+	// TC-1:- Verify the user can able to login with perfect username and password
 	@Test(priority = 3)
 	public void loginCheck() {
 		dashboardPage = loginPage.checkLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
+	// TC02:- Verify the user cannot able to login with wrong username and password
 	@Test(priority = 4)
 	public void loginCheckNegative() {
 		dashboardPage = loginPage.checkLogin("userName", "Password");
