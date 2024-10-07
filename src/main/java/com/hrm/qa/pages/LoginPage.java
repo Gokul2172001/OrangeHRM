@@ -36,4 +36,7 @@ public class LoginPage extends TestBase{
 		lgnbtn.click();
 		return new DashboardPage();
 	}
+	public DashboardPage homeLogoCheck() {
+		return logo.isDisplayed();
+	}
 }
